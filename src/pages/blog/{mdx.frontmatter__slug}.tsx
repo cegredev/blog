@@ -11,8 +11,10 @@ type Props = {
 const BlogPost = ({ data, children }: Props) => {
 	return (
 		<Layout pageTitle={data.mdx.frontmatter.title}>
-			<p>{data.mdx.frontmatter.date}</p>
-			{children}
+			<div className="blog">
+				<p>{data.mdx.frontmatter.date}</p>
+				{children}
+			</div>
 		</Layout>
 	);
 };

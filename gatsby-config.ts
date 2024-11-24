@@ -40,6 +40,14 @@ const config: GatsbyConfig = {
 			},
 			__key: "blog",
 		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "design-images",
+				path: `./src/images`,
+			},
+			__key: "design-images",
+		},
 		"gatsby-plugin-image",
 		"gatsby-plugin-sharp",
 	],

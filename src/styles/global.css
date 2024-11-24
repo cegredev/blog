@@ -3,5 +3,29 @@
 @tailwind utilities;
 
 h1 {
-	@apply text-2xl font-bold;
+	@apply text-4xl font-bold;
+}
+
+a {
+	@apply underline hover:font-bold;
+}
+
+nav li {
+	@apply p-2 grid place-items-center;
+}
+
+.blog h2 {
+	@apply text-2xl font-bold mt-8 mb-4;
+}
+
+.blog ul {
+	@apply list-disc;
+}
+
+.blog ol {
+	@apply list-decimal;
+}
+
+.blog li {
+	@apply ml-8;
 }
