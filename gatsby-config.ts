@@ -51,6 +51,7 @@ const config: GatsbyConfig = {
 		"gatsby-plugin-image",
 		"gatsby-plugin-sharp",
 	],
+	pathPrefix: "/blog",
 };
 
 export default config;
