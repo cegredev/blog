@@ -40,7 +40,6 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: "20"
-                  cache: pnpm
             - name: Setup Pages
               id: pages
               uses: actions/configure-pages@v5
@@ -59,7 +58,7 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-gatsby-build-
             - name: Install dependencies
-              run: pnpm install
+              run: npm install -g pnpm && pnpm install
             - name: Build with Gatsby
               env:
                   PREFIX_PATHS: "true"
