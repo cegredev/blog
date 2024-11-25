@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 type Props = {
@@ -8,19 +8,8 @@ type Props = {
 };
 
 const Layout = ({ pageTitle, children }: Props) => {
-	const data = useStaticQuery(graphql`
-		query {
-			site {
-				siteMetadata {
-					title
-				}
-			}
-		}
-	`);
-
 	return (
 		<div>
-			{/* <header>{data.site.siteMetadata.title}</header> */}
 			<nav className="w-full border-b-2">
 				<ul className="flex flex-row gap-2">
 					<li>
@@ -28,7 +17,7 @@ const Layout = ({ pageTitle, children }: Props) => {
 							<StaticImage
 								src="../images/logo.png"
 								alt="Logo"
-								height="60"
+								height={60}
 							/>
 						</Link>
 					</li>

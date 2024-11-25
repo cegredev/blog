@@ -33,4 +33,5 @@ export const query = graphql`
 export const Head = ({ data }: any) => (
 	<Seo title={data.mdx.frontmatter.title} />
 );
+
 export default BlogPost;
